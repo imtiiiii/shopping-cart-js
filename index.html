@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <!-- bootstrap here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- font awsome js is linked here  -->
+    <script src="https://kit.fontawesome.com/f693b0aab7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="my-lg-5">
+        <h1 class="text-center">My Shopping <span class="text-warning">Cart</h1>
+    </header>
+    <main class="bg-white container-fluid ">
+        <!-- This section below is for cart shopping product -->
+        <section class="container bg-light">
+            <!-- This row below will contain one product pic,name,quantity,price,and cross button -->
+            <!-- row 1 here starts -->
+            <div class="row bg-white my-lg-5 shadow-lg py-lg-5">
+                <!-- this div below contain product pic and name  -->
+                <div class="col-lg-6 row row-cols-lg-2 justify-content-center align-items-center">
+                    <div>
+                        <img class="img-fluid w-50" src="images/product-1.png" alt="">
+                    </div>
+                    <h3 class="pe-5">
+                        Iphone 11 128gb black
+                    </h3>
+                </div>
+                <!-- this div below will contain product quantity field -->
+                <div class="col-lg-3  d-lg-flex  align-items-center  justify-content-center">
+                    <button class="mx-3 border border-0" id="plus-button1"
+                        onclick="addQuantity('plus-button1','quantity1','single-product-total1',1219)"><i
+                            class="fas fa-plus  "></i></button>
+                    <input type="text" class="form-control w-50 text-center " value="0" disabled id="quantity1">
+                    <button class="mx-3" id="minus-button1"
+                        onclick="minusQuantity('minus-button1','quantity1','single-product-total1',1219);"><i
+                            class="fas fa-minus border border-0 "></i></button>
+
+                </div>
+                <!-- this div below is for  a product's total price and cancel button -->
+                <div class="col-lg d-lg-flex justify-content-center align-items-center">
+                    <h1 class="d-inline mx-lg-5 ">$ <span id="single-product-total1"
+                            class="single-product-total">00</span></h1>
+                    <div>
+                        <button class="border border-0" id="clear-order-1"
+                            onclick="clearQuantity('quantity1','single-product-total1')">
+                            <img class="img-fluid d-inline" src="images/remove.png" alt="">
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- row here in the upwards end here  -->
+
+            <!-- This row below will contain one product pic,name,quantity,price,and cross button -->
+
+            <!-- row 2 here starts -->
+            <div class="row bg-white my-lg-5 shadow-lg my-lg-5 py-lg-5">
+                <!-- this div below contain product pic and name  -->
+                <div class="col-lg-6 row row-cols-lg-2 justify-content-center align-items-center">
+                    <div>
+                        <img class="img-fluid w-50" src="images/product-2.png" alt="">
+                    </div>
+                    <h3 class="pe-5">
+                        Iphone 11 silicon cover
+                    </h3>
+                </div>
+                <!-- this div below will contain product quantity field -->
+                <div class="col-lg-3  d-lg-flex align-items-center  justify-content-center">
+                    <button class="mx-3 border border-0" id="plus-button2"
+                        onclick="addQuantity('plus-button2','quantity2','single-product-total2',59)"><i
+                            class="fas fa-plus  "></i></button>
+                    <input type="text" class="form-control w-50 text-center " value="0" disabled id="quantity2">
+                    <button class="mx-3" id="minus-button2"
+                        onclick="minusQuantity('minus-button2','quantity2','single-product-total2',59);"><i
+                            class="fas fa-minus border border-0"></i></button>
+
+                </div>
+                <!-- this div below is for price and cancel button -->
+                <div class="col-lg d-lg-flex justify-content-center align-items-center">
+                    <h1 class="d-inline mx-lg-5  ">$ <span id="single-product-total2"
+                            class="single-product-total">00</span></h1>
+                    <div>
+                        <button class="border border-0" onclick="clearQuantity('quantity2','single-product-total2')">
+                            <img class="img-fluid d-inline" src="images/remove.png" alt="">
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- row here in the upwards end here  -->
+            <!-- This row below will contain one product pic,name,quantity,price,and cross button -->
+            <!-- row 3 here starts -->
+            <div class="row bg-white my-5 shadow-lg my-lg-5 py-lg-5">
+                <!-- this div below contain product pic and name  -->
+                <div class="col-lg-6 row row-cols-lg-2 justify-content-center align-items-center">
+                    <div>
+                        <img class="img-fluid w-50" src="images/product-1.png" alt="">
+                    </div>
+                    <h3 class="pe-5">
+                        Iphone 12 pro 128gb black
+                    </h3>
+                </div>
+                <!-- this div below will contain product quantity field -->
+                <div class="col-lg-3  d-lg-flex align-items-center  justify-content-center">
+                    <button class="mx-3 border border-0" id="plus-button3"
+                        onclick="addQuantity('plus-button3','quantity3','single-product-total3',100)"><i
+                            class="fas fa-plus  "></i></button>
+                    <input type="text" class="form-control w-50 text-center " value="0" disabled id="quantity3">
+                    <button class="mx-3" id="minus-button3"
+                        onclick="minusQuantity('minus-button3','quantity3','single-product-total3',100);"><i
+                            class="fas fa-minus border border-0"></i></button>
+
+                </div>
+                <!-- this div below is for price and cancel button -->
+                <div class="col-lg d-lg-flex justify-content-center align-items-center">
+                    <h1 class="d-inline mx-lg-5 ">$ <span id="single-product-total3"
+                            class="single-product-total">00</span></h1>
+                    <div>
+                        <button class="border border-0" onclick="clearQuantity('quantity3','single-product-total3')">
+                            <img class="img-fluid d-inline" src="images/remove.png" alt="">
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- row here in the upwards end here  -->
+
+
+        </section>
+        <!-- This section below is for grand total -->
+        <section class="bg-light container">
+            <div class="row row-cols-lg-2 justify-content-lg-end bg-white p-lg-5">
+                <div class="cols-lg px-lg-5 my-3">
+                    <h1>Subtotal:</h1>
+                </div>
+                <div class="cols-lg d-lg-flex justify-content-lg-end pe-5 ">
+                    <h1>$<span id="sub-total">00</span></h1>
+                </div>
+                <div class="cols-lg px-lg-5 my-3">
+                    <h1>tax:</h1>
+                </div>
+                <div class="cols-lg d-lg-flex justify-content-lg-end pe-5">
+                    <h1>$<span id="tax">00</span></h1>
+                </div>
+                <div class="cols-lg px-lg-5 my-3">
+                    <h1>Total:</h1>
+                </div>
+                <div class="cols-lg d-lg-flex justify-content-lg-end pe-5">
+                    <h1>$<span id="grand-total1">00</span></h1>
+                </div>
+                <!-- this below div for check out button -->
+                <div class="d-lg-flex justify-content-lg-end mx-lg-3">
+                    <button type="button" class="btn btn-outline-warning text-black " onclick="checkout();">Check
+                        out</button>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- bootstrap js here  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+    <!-- my js here  -->
+    <script src="shopping-cart.js"></script>
+</body>
+
+</html>
